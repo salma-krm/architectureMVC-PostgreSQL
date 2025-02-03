@@ -1,0 +1,15 @@
+{
+    "name": "youcode/architecture-mvc-postgre-sql",
+    "autoload": {
+        "psr-4": {
+             "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "salma",
+            "email": "salmatergui7@gmail.com"
+        }
+    ],
+    "require": {}
+}
