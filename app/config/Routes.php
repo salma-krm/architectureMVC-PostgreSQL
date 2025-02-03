@@ -15,9 +15,7 @@ class Routes {
                 $this->controller = $controllerClass;
                 unset($url[0]);
             }
-        
-
-
+    
             
             $controllerClass = '\\app\\controllers\\' . $this->controller . 'Controller';
             $this->controller = new $controllerClass;
@@ -30,7 +28,12 @@ class Routes {
             }
 
            
-            $this->param = $url ? array_values($url) : [];
+            if (!empty($url)) {
+                $this->param = array_values($url);
+            } else {
+                $this->param = [];
+            }
+            
         }else{
             $this->controller = new $this->controller;
         }
