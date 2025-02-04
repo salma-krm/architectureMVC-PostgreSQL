@@ -4,7 +4,7 @@ class PageController
 {
     public function index()
     {
-        echo'post/index';
+        echo'index page';
     }
 
 }
