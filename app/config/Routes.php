@@ -1,7 +1,5 @@
 <?php
-
 namespace app\config;
-
 class Routes
 {
     private $controller = 'Page';
@@ -17,10 +15,8 @@ class Routes
 
             if (class_exists('\\app\\controllers\\' . $controllerClass . 'Controller')) {
                 $this->controller = $controllerClass;
-                // unset($url[0]);
+                unset($url[0]);
             }
-
-
             $controllerClass = '\\app\\controllers\\' . $this->controller . 'Controller';
             $this->controller = new $controllerClass;
 
@@ -47,15 +43,7 @@ class Routes
     {
 
         $uri = $_SERVER['PATH_INFO'] ?? '/';
-
-        $request = $_REQUEST;
-        // var_dump($uri);
-        // var_dump($request);
-        // die;
-
         $uri = explode('/', trim($uri, '/'));
-
-
         return $uri;
     }
     private function convertArray($array)
