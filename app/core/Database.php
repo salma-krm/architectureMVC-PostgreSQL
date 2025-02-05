@@ -20,7 +20,6 @@ class Database{
                     self::$username,
                     self::$password
                 );
-                
                 self::$connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 echo 'Hi  ';  
             } catch (PDOException $e) {
