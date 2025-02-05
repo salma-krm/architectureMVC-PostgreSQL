@@ -4,7 +4,7 @@ use PDOException;
 use PDO;
 class Database{
     private static $servername = "localhost";
-    private static $username = "root";
+    private static $username = "postgres";
     private static $password = 12345;
     private static $dbname = "Architecturemvc";
     private static $port = 5432;
